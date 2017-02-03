@@ -33,6 +33,7 @@
  .album-view-details .album-view-release-info {
      font-weight: 300;
      font-size: 0.75rem;
+     float: left;
  }
  .album-view-song-list {
      width: 90%;

@@ -1,6 +1,3 @@
-function Fixtures() {
-     var Fixtures = {};
-
 var albumPicasso = {
      title: 'The Colors',
      artist: 'Pablo Picasso',
