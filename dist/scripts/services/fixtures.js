@@ -1,3 +1,6 @@
+function Fixtures() {
+     var Fixtures = {};
+
 var albumPicasso = {
      title: 'The Colors',
      artist: 'Pablo Picasso',
@@ -26,4 +29,5 @@ var albumPicasso = {
          { title: 'Can you hear me now?', duration: '3:14' },
          { title: 'Wrong phone number', duration: '2:15' }
      ]
+ }
  };

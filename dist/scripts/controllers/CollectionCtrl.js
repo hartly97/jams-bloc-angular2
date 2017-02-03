@@ -1,9 +1,10 @@
 (function() {
-     function CollectionCtrl(fixtures) {
-         this.albums = [];
-         for (var i=0; i < 12; i++) {
-            this.albums.push(fixtures.getAlbum());
-         }
+     function CollectionCtrl(Fixtures) {
+          this.albums = Fixtures.getCollection(12);
+         //this.albums = [];
+         //for (var i=0; i < 12; i++) {
+            //this.albums.push(Fixtures.getAlbum());
+         //}
      }
 
      angular
