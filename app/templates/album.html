@@ -3,6 +3,7 @@
          <div class="column half">
              <img src="{{album.albumData.albumArtUrl}}">
          </div>
+
          <div class="album-view-details column half" >
              <h2 class="album-view-title">{{album.albumData.title}}</h2>
              <h3 class="album-view-artist">{{album.albumData.artist}}</h3>
@@ -10,6 +11,7 @@
              <h5 class="album-view-release-info">{{album.albumData.label}}</h5>
          </div>
      </section>
+
      <table class="album-view-song-list">
 
          <tr class="album-view-song-item" ng-mouseover="hovered = true" ng-mouseleave="hovered = false" ng-repeat="song in album.albumData.songs">
