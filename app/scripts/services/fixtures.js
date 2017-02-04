@@ -1,3 +1,4 @@
+(function(){
 function Fixtures() {
   var Fixtures = {};
 
