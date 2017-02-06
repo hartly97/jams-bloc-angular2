@@ -2,11 +2,11 @@
      function SongPlayer(Fixtures) {
           var SongPlayer = {};
 
-    /**
-    * @desc Container of songs
-    * @type {Object}
-    */
-    var currentAlbum = Fixtures.getAlbum();
+  //  /**
+  //  * @desc Container of songs
+    //* @type {Object}
+    //*/
+  //  var currentAlbum = Fixtures.getAlbum();
 
     /**
     * @desc Buzz object audio file
@@ -21,10 +21,10 @@
        */
        var setSong = function(song) {
 
-         //if (currentBuzzObject) {
-             //currentBuzzObject.stop();
-             //SongPlayer.currentSong.playing = null;
-         //}
+         if (currentBuzzObject) {
+            currentBuzzObject.stop();
+            SongPlayer.currentSong.playing = null;
+         }
          stopSong();
 
 
@@ -38,7 +38,7 @@
 
     /**
      *@function stopSong
-     *@desc Stops currently playing song
+     *@desc Stops currently
     */
 
      var stopSong = function(){
@@ -87,7 +87,8 @@
                setSong(song);
                playSong(song);
            } else if (SongPlayer.currentSong === song) {
-               if (currentBuzzObject.isPaused()) {
+              // if (currentBuzzObject.isPaused()) { 
+                 if(currentBuzzObject && currentBuzzObject.isPaused()){
                    playSong(song);
                }
           }
@@ -116,7 +117,7 @@
             currentSongIndex--;
 
             if (currentSongIndex < 0) {
-            stopSong(;)
+            stopSong;
 
           } else {
             var song = currentAlbum.songs[currentSongIndex];
