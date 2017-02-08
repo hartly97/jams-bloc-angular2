@@ -23,14 +23,17 @@
                      <div class="fill"></div>
                      <div class="thumb"></div>
                  </div>
-                 <seek-bar></seek-bar>
+                 <!--directives ckp10 pt2-->
+                 <seek-bar value="{{ playerBar.songPlayer.currentTime }}"
+                            max="{{ playerBar.songPlayer.currentSong.duration }}"
+                            on-change="playerBar.songPlayer.setCurrentTime(value)"></seek-bar>
                  <div class="current-time"></div>
                  <div class="total-time">{{playerBar.songPlayer.currentSong.duration}}</div>
              </div>
          </div>
          <div class="control-group volume">
              <span class="icon ion-volume-high"></span>
-             <seek-bar></seek-bar>
+             <seek-bar value=""max on-change="playerBar.songPlayer.setCurrentTime(value)"seek-bar>
          </div>
      </div>
  </section>
