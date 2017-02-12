@@ -7,7 +7,7 @@
              <a class="play-pause">
                <span class='ion-play'ng-show="!playerBar.songPlayer.currentSong.playing"
          ng-click="playerBar.songPlayer.play()"></span>
-            <span class='ion-pause'ng-show="playerBar.songPlayer.currentSong.playing"
+              <span class='ion-pause'ng-show="playerBar.songPlayer.currentSong.playing"
          ng-click="playerBar.songPlayer.pause()"></span>
              </a>
              <a class="next" ng-click="playerBar.songPlayer.next()">
@@ -16,24 +16,29 @@
          </div>
          <div class="control-group currently-playing">
              <h2 class="song-name">{{playerBar.songPlayer.currentSong.title}}</h2>
-             <h2 class="artist-song-mobile">{{playerBar.albumData.artist}} - {{playerBar.songPlayer.currentSong.title}}</h2>
-             <h3 class="artist-name">{{playerBar.albumData.artist}}</h3>
-             <div class="seek-control">
-                 <div class="seek-bar">
-                     <div class="fill"></div>
-                     <div class="thumb"></div>
+            <!--?   <div class="seek-control">-->
+
+              <!--?   <div class="seek-bar">-->
+                     <!--<div class="fill"></div>
+                     <div class="thumb"></div>?????-->
                  </div>
                  <!--directives ckp10 pt2-->
                  <seek-bar value="{{ playerBar.songPlayer.currentTime }}"
                             max="{{ playerBar.songPlayer.currentSong.duration }}"
-                            on-change="playerBar.songPlayer.setCurrentTime(value)"></seek-bar>
-                 <div class="current-time"></div>
+                            on-change="playerBar.songPlayer.setCurrentTime(value)">
+                  </seek-bar>
+                 <div class="current-time">{{playerBar.songPlayer.currentTime}}</div>
                  <div class="total-time">{{playerBar.songPlayer.currentSong.duration}}</div>
-             </div>
+        </div>
+             <h2 class="artist-song-mobile">{{playerBar.albumData.artist}} - {{playerBar.songPlayer.currentSong.title}}</h2>
+             <h3 class="artist-name">{{playerBar.albumData.artist}}</h3>
          </div>
          <div class="control-group volume">
              <span class="icon ion-volume-high"></span>
-             <seek-bar value=""max on-change="playerBar.songPlayer.setCurrentTime(value)"seek-bar>
+             <seek-bar value="{{playerBar.songPlayer.currentVolume}}"
+                max=100
+                on-change="playerBar.songPlayer.setVolume(value)">
+             </seek-bar>
          </div>
      </div>
  </section>

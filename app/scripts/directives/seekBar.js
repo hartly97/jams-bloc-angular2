@@ -1,7 +1,7 @@
 (function() {
      function seekBar($document) {
 
-       var calculatePercent = function(seekBar, event) {
+      var calculatePercent = function(seekBar, event) {
                  var offsetX = event.pageX - seekBar.offset().left;
                  var seekBarWidth = seekBar.width();
                  var offsetXPercent = offsetX / seekBarWidth;
@@ -31,7 +31,7 @@
                scope.value = newValue;
              });
 
-            attributes.$observe('max', function(newValue) {
+             attributes.$observe('max', function(newValue) {
               scope.max = newValue;
             });
 
@@ -70,12 +70,12 @@
         });
       };
 
-        var notifyOnChange = function(newValue) {
+            var notifyOnChange = function(newValue) {
           if (typeof scope.onChange === 'function') {
             scope.onChange({value: newValue});
           }
         };
-      }
+    }
   };
 }
 
