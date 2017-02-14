@@ -40,9 +40,9 @@ function Fixtures() {
                var albums = [];
 
                for (var i = 0; i < numberOfAlbums; i++) {
-                   albums.push(albumPicasso);
+                   albums.push(albumPicasso);//?collection.push?
                }
-               return albums;
+               return albums;//?collection
            };
 
            return Fixtures;
