@@ -1,40 +1,27 @@
 (function(){
   function timecode(){
-<<<<<<< HEAD
-=======
 //input seconds//
->>>>>>> 11directives
     return function(seconds){
 
-      var seconds = Number.parseFloat(seconds);
+      var seconds = seconds;
 
-<<<<<<< HEAD
-      if (Number.isNaN(seconds)) {
-        return '-:--';
-      }
-=======
 //Checks for NaN//
-      if (Number.isNaN(seconds)) {
+      if (seconds === "NaN"){
         return '-:--';
-      }
+      } else {
 
->>>>>>> 11directives
-      var wholeSeconds = Math.floor(seconds);
-      var minutes = Math.floor(wholeSeconds / 60);
-      var remainingSeconds = wholeSeconds % 60;
+      //var wholeSeconds = Math.floor(seconds);
+      //var minutes = Math.floor(wholeSeconds / 60);
+      //var remainingSeconds = wholeSeconds % 60;
+      //var output = minutes + ':';
+      //if (remainingSeconds < 10) {
+         //output += '0';
+      //}
+      //output += remainingSeconds;
+      var output = buzz.toTimer(seconds);
 
-      var output = minutes + ':';
-
-      if (remainingSeconds < 10) {
-         output += '0';
-      }
-
-      output += remainingSeconds;
-<<<<<<< HEAD
-=======
-
->>>>>>> 11directives
       return output;
+      }
     };
   }
 

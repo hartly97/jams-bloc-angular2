@@ -36,28 +36,22 @@ function Fixtures() {
       return albumPicasso;
     };
 
-<<<<<<< HEAD
-               for (var i = 0; i < numberOfAlbums; i++) {
-                   albums.push(albumPicasso);//?collection.push?
-               }
-               return albums;//?collection
-=======
+
     Fixtures.getCollection = function(numberOfAlbums) {
       //var albums = [];
       collection = [];
       for (var i = 0; i < numberOfAlbums; i++) {
         collection.push(Fixtures.getAlbum(albumPicasso))
         //albums.push(albumPicasso);
-               }
+        }
               // return albums;
-               return collection;
->>>>>>> 11directives
-           };
+        return collection;
+        };
 
-           return Fixtures;
-       }
+        return Fixtures;
+      }
 
-       angular
-           .module('blocJams')
-           .factory('Fixtures', Fixtures)
-   })();
+    angular
+       .module('blocJams')
+       .factory('Fixtures', Fixtures)
+})();
