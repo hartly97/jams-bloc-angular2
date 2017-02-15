@@ -32,17 +32,26 @@ function Fixtures() {
        ]
    };
 
-   Fixtures.getAlbum = function() {
-               return albumPicasso;
-           };
+    Fixtures.getAlbum = function() {
+      return albumPicasso;
+    };
 
-           Fixtures.getCollection = function(numberOfAlbums) {
-               var albums = [];
-
+<<<<<<< HEAD
                for (var i = 0; i < numberOfAlbums; i++) {
                    albums.push(albumPicasso);//?collection.push?
                }
                return albums;//?collection
+=======
+    Fixtures.getCollection = function(numberOfAlbums) {
+      //var albums = [];
+      collection = [];
+      for (var i = 0; i < numberOfAlbums; i++) {
+        collection.push(Fixtures.getAlbum(albumPicasso))
+        //albums.push(albumPicasso);
+               }
+              // return albums;
+               return collection;
+>>>>>>> 11directives
            };
 
            return Fixtures;

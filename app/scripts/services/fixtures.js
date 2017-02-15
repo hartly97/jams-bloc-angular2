@@ -32,23 +32,26 @@ function Fixtures() {
        ]
    };
 
-   Fixtures.getAlbum = function() {
-               return albumPicasso;
-           };
+    Fixtures.getAlbum = function() {
+      return albumPicasso;
+    };
 
-           Fixtures.getCollection = function(numberOfAlbums) {
-               var albums = [];
 
-               for (var i = 0; i < numberOfAlbums; i++) {
-                   albums.push(albumPicasso);//?collection.push?
-               }
-               return albums;//?collection
-           };
+    Fixtures.getCollection = function(numberOfAlbums) {
+      //var albums = [];
+      collection = [];
+      for (var i = 0; i < numberOfAlbums; i++) {
+        collection.push(Fixtures.getAlbum(albumPicasso))
+        //albums.push(albumPicasso);
+        }
+              // return albums;
+        return collection;
+        };
 
-           return Fixtures;
-       }
+        return Fixtures;
+      }
 
-       angular
-           .module('blocJams')
-           .factory('Fixtures', Fixtures)
-   })();
+    angular
+       .module('blocJams')
+       .factory('Fixtures', Fixtures)
+})();

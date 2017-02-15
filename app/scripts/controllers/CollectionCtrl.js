@@ -4,6 +4,6 @@
   }
 
   angular
-    .module('rockJams')
+    .module('blocJams')
     .controller('CollectionCtrl', ["Fixtures", CollectionCtrl]);
 })();
